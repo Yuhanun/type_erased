@@ -30,8 +30,8 @@ public:
         return *this;
     }
 
-    template <typename T, typename...Tys>
-    void emplace(Tys&&...args) {
+    template <typename T, typename... Tys>
+    void emplace(Tys&&... args) {
         if (sizeof(T) > _cur_size) {
             delete[] _ptr;
             _ptr = reinterpret_cast<std::int8_t*>(new std::int8_t[sizeof(T)]);

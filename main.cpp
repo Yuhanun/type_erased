@@ -1,5 +1,5 @@
-#include "type_erased.hpp"
 #include <iostream>
+#include "type_erased.hpp"
 
 int main() {
     auto x = type_erased{};
