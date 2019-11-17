@@ -81,7 +81,7 @@ private:
             _ptr = reinterpret_cast<std::int8_t*>(new std::int8_t[sizeof(T)]);
             _capacity = sizeof(T);
         }
-        *reinterpret_cast<T*>(_ptr) = content;
+        *reinterpret_cast<T*>(_ptr) = std::forward<T>(content);
         _cur_size = sizeof(T);
     }
 
